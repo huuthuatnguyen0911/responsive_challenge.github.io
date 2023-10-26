@@ -4,7 +4,7 @@
   --gradientColor: linear-gradient(96.97deg, #f79e0e 7.82%, #eebd23 103.98%);
   --Primarycolor: #fdc221;
   --Secondarycolor: #e1e1e1;
-  --DarkBgColor: url(/responsive_challenge.github.io/assets/images/img_hero_banner.png);
+  --DarkBgColor: url(/assets/images/img_hero_banner.png);
   ---mainFont: "Nunito Sans", sans-serif;
   --SecondaryFont: "Pacifico", cursive;
   --TitleFont: "Roboto", sans-serif;
@@ -161,7 +161,7 @@ button:hover {
   width: 90px;
   height: 18.75px;
   color: #fff;
-  list-style: url(/responsive_challenge.github.io/assets/images/img_icon_li.png);
+  list-style: url(/assets/images/img_icon_li.png);
   font-family: var(---mainFont);
   font-size: 13.75px;
   font-weight: 600;
@@ -367,7 +367,7 @@ small {
 }
 
 .DescList ul li {
-  list-style: url(/responsive_challenge.github.io/assets/images/img_icon_li.png);
+  list-style: url(/assets/images/img_icon_li.png);
   font-family: var(---mainFont);
   font-size: 11px;
   font-weight: 600;
@@ -1074,7 +1074,7 @@ form button {
 }
 
 footer {
-  background: url(/responsive_challenge.github.io/assets/images/img_hero_banner.png);
+  background: url(/assets/images/img_hero_banner.png);
   width: 100%;
   height: 367.5px;
   display: flex;
@@ -1144,7 +1144,7 @@ footer {
 }
 
 .copyright {
-  background: url(/responsive_challenge.github.io/assets/images/img_hero_banner.png);
+  background: url(/assets/images/img_hero_banner.png);
   border-top: 0.5px grey solid;
   text-align: center;
   color: white;
@@ -1291,11 +1291,26 @@ footer .logo {
   align-items: center;
 }
 .body-content-arrow{
-  border: 2px solid #294199;
+  /* border: 2px solid #294199; */
   border-radius: 50%;
   width: 27px;
   height: 27px;
 }
+
+.body-content-arrow::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  width: 25px; /* Để tạo hiệu ứng border nằm trong background, bạn có thể giảm kích thước của ::after */
+  height: 25px; /* Để tạo hiệu ứng border nằm trong background, bạn có thể giảm kích thước của ::after */
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #294199;
+  position: relative;
+  left: 0px; /* Điều này sẽ làm cho border nằm bên trong phần tử gốc */
+  top: -31px; /* Điều này sẽ làm cho border nằm bên trong phần tử gốc */
+}
+
 
 .arrow-left{
   padding: 10px 9px 9px 9px;
